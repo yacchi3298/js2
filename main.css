@@ -1,24 +1,56 @@
-table{
+.dentaku{
   width:300px;
-  height: 300px;
+  height: 400px;
   text-align: center;
+  
 }
 
 #result{
+  display:inline-block;
+  
   width: 300px;
   font-size: 30px;
   color:white;
   background-color: black;
+  
+  
 }
 
 #button{
-  width: 100%;
-  font-size: 30px;
-  margin:0;
-  padding:0;
+    /* ボタンのサイズ */
+  width: 70px;
+  height: 70px;
+  /* ボタンの文字サイズ */
+  font-size: x-large;
+  /* 数字部分の背景色 */
+  background-color:#C0C0C0;
+  /* ボタンの詳細設定 */
+  border: none;
+  border-radius: 20px;
+
 }
 
-.dentaku_button{
-  margin:5px;
-  padding:0;
+#big-btn{
+  width: 140px;
+  height: 70px;
+  font-size: x-large;
+  border: none;
+  border-radius: 20px;
+  background-color: #FF9933;
+}
+
+#operator{
+  width: 70px;
+  height: 70px;
+  font-size: x-large;
+  border: none;
+  border-radius: 20px;
+  background-color: #FF9933;
+}
+
+
+.display {
+  width: 250px;
+  text-align: right; 
+
 }
