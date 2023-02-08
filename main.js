@@ -37,7 +37,7 @@ function clickButton(target){
       result.innerHTML+=0;
     }else if(operatorResultValue=="+0"||operatorResultValue=="-0"||operatorResultValue=="*0"||operatorResultValue=="/0"){
       return;
-    }else if(operatorResultValue=="0."){
+    }else if(pointMode == "decimal"){
       result.innerHTML+=targetValue;
     }else if(result.innerHTML==0 && targetValue== 00){
       return;
