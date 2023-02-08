@@ -35,24 +35,22 @@ function clickButton(target){
   }else if(targetValue== 0 ||targetValue== 00){
     if(lastResultValue=="+"|| lastResultValue=="-"||lastResultValue=="*"||lastResultValue=="/"){
       result.innerHTML+=0;
-    }else if(operatorResultValue=="+0"||operatorResultValue=="-0"||operatorResultValue=="*0"||operatorResultValue=="/0"||result.innerHTML==0){
+    }else if(operatorResultValue=="+0"||operatorResultValue=="-0"||operatorResultValue=="*0"||operatorResultValue=="/0"){
+      return;
+    }else if(operatorResultValue=="0."){
+      result.innerHTML+=targetValue;
+    }else if(result.innerHTML==0 && targetValue== 00){
       return;
     }else{
       result.innerHTML+=targetValue;
     }
   }else{
-    if(result.innerHTML==0){
-      if(lastResultValue=="."){
-        result.innerHTML+=targetValue;
-      }else{
-        result.innerHTML=targetValue;
-      }
+    if(pointMode == "decimal"){
+      result.innerHTML+=targetValue;
+    }else if(result.innerHTML==0){
+      result.innerHTML=targetValue;
     }else{
-      if(lastResultValue==0){
-        result.innerHTML=result.innerHTML.slice(0,-1)+targetValue;
-      }else{
-        result.innerHTML+=targetValue;
-      }
+      result.innerHTML+=targetValue;
     }
   }
   function digitNum(total) {
